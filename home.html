@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBO Movie search app</title>
+    <link rel="Stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+
+</head>
+
+<body>
+
+    <div id="front-page">
+        <div class="top">
+            <img src="https://www.hbo.com/img/hbo-logo-blk.svg" height="100px" width="100px"><br>
+            <form class="search-movies">
+
+                <input type="text" class="ip" placeholder="search movies">
+                <button class="search">search</button>
+
+            </form>
+            
+            <button id="log" onclick="updates()">LOGIN</button>
+
+            <button id="sign-in" onclick="update()">SIGN UP</button>
+            <h5 class="free">SIGN UP FOR FREE</h5>
+            <img class="fav" style="margin-left:450px;" width=25px height=25px src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFsAdkcI8R_X5GDnPcOrn-uaBN_FYmp--5Cg&s">
+            <img class="profile" style="margin-left:20px;" width=35px height=35px  src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg">
+            <div id="profile-dropdown" class="dropdown hidden">
+                <p id="profile-name">User Name</p>
+                <p id="profile-email">user@email.com</p>
+                <button id="logout-btn">Logout</button>
+            </div>
+              
+        </div>
+        
+
+
+ 
+        <img style="width: 100%;height: 100%;" src="https://joshbalogh.wordpress.com/wp-content/uploads/2021/10/img_4663.jpg?w=1024" width="1800px"
+                height="800px">
+
+        
+        <h1 style="text-align: center;">Stream the Latest</h1>
+        <div id="boxes">
+            <div class="box">
+                
+                <img src="https://m.media-amazon.com/images/I/819xG3LWPOS._UF894,1000_QL80_.jpg">
+                <h3>LUCA</h3>
+                <p>A 13-year-old boy experiences an unforgettable seaside summer on the Italian Riviera filled with gelato,
+                    pasta and endless scooter rides. Luca shares these adventures with his newfound best friend, but all the
+                    fun is threatened by a deeply-held secret: he is a sea monster from another world just below the ocean's
+                    surface.
+                </p>
+            </div>
+            <div class="box">
+                
+                <img src="https://wallpapercat.com/w/full/a/8/1/43112-3840x2160-desktop-4k-encanto-background-image.jpg">
+                <H3 >ENCANTO</H3>
+                <p>An extraordinary family, the Madrigals, live hidden in the mountains of Colombia, in a magical house
+                            called an Encanto. The magic of the Encanto has blessed every child in the family with a unique gift -
+                            every child except one, Mirabel.</p>
+            </div>
+            <div class="box">
+                
+                <img src="https://c4.wallpaperflare.com/wallpaper/159/723/593/tangled-musical-film-wallpaper-preview.jpg">
+                <H3 >TANGLED</H3>s
+                    <p >The magically long-haired Rapunzel has spent her entire life in a tower, but now that a runaway thief
+                            has stumbled upon her, she is about to discover the world for the first time, and who she really is.
+                        </p>
+            </div>
+            <div class="box">
+                
+                <img src="https://wallpapers.com/images/featured/zootopia-e8u4m9lttr2wlg4q.jpg">
+                <h3>ZOOTOPIA</h3>
+    
+                    <p>From the largest elephant to the smallest shrew, the city of Zootopia is a mammal metropolis where
+                            various animals live and thrive. When Judy Hopps becomes the first rabbit to join the police force, she
+                            quickly learns how tough it is to enforce the law. Determined to prove herself, Judy jumps at the
+                            opportunity to solve a mysterious case. Unfortunately, that means working with Nick Wilde, a wily fox
+                            who makes her job even harder.
+                        </p>
+            </div>
+        </div>
+
+        <div class="seven">
+            <h2 class="tonight-on-hbo">TONIGHT ON HBO</h2>
+            <p class="see-full-schedule">SEE FULL SCHEDULE</p>
+        </div>
+        <hr>
+        <div class="time">
+            <div>
+                <p class="mn">DINNER FOR SUCHMUCKS</p>
+                <P class="bv">8:00 PM IST</P>
+            </div>
+            <div>
+                <P class="mn">AMELIERRR</P>
+                <p class="bv">10:00 PM IST</p>
+            </div>
+            <div>
+                <p class="mn">BUFFFERING</p>
+                <p class="bv">12:00 PM IST</p>
+
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="backpage">
+    <div class="page">
+        <button class="cancel-page">X</button>
+
+
+        <h2 class="sign">SIGN UP</h2>
+        <p class="sign">signup Please create an account</p>
+        <form id="sign-up-form">
+            <label>Name</label>
+            <input type="text" placeholder="NAME" class="details" id="name" required>
+            <label>Email Address</label>
+            <input type="email" placeholder="email id" class="details" id="email" required>
+            <label>Password</label>
+            <input type="password" placeholder="password" class="details" id="password" required>
+            <label>Confirm Password</label>
+            <input type="password" placeholder="confirm password" class="details" id="confirmpassword" required>
+            <input type="checkbox" name="agree" id="agree" required>
+            <label>By signing up,I'm accepting your <mark>privacy policy </mark> & <mark>Terms of Service</mark></label>
+            <button id="up">Signup</button>
+            <h6>OR</h6>
+            <P>Already an account? <span class="change-to-login">Login</span></P>
+
+
+        </form>
+    </div>
+</div>
+   <div class="loginbackpage">
+    <div id="loginpage">
+        <button class="cancel-login">X</button>
+
+        <h3 style="color:white ;text-align:center;">Welcome back</h3>
+        <form id="log-in-form">
+        <label>Email Address</label>
+            <input type="email" placeholder="email id" class="details" id="emailid" required>
+            <label>Password</label>
+            <input type="password" placeholder="Password" class="details" id="pw" required>
+            <p style="text-align: end;cursor: pointer;">Forget password ?</p>
+            <button id="up">Sign In</button>
+            <P>Dont have an account? <span class="change-to-signup">Sign up</span></P>
+         </form>
+    </div>
+</div>
+
+    <div id="luc" class="movies">
+        <div class="refresh">
+            <button class="ref">X</button>
+        </div>
+
+        <div class="image">
+            <img class="img" alt="Luca Image Poster" title="Luca Image Poster"
+                src="https://upload.wikimedia.org/wikipedia/en/3/33/Luca_%282021_film%29.png">
+        </div>
+        <div class="content">
+            <h2 class="movie">Luca</h2>
+            <p class="author">Enrico Casarosa</p>
+            <p>PG
+                2021 1h 35m
+                Animation, Adventure, Family, Fantasy, Comedy, Drama</p>
+            <button class="add-to-whist">Add to Whistlist</button>
+            <p>A 13-year-old boy experiences an unforgettable seaside summer on the Italian Riviera filled with gelato,
+                pasta and endless scooter rides. Luca shares these adventures with his newfound best friend, but all the
+                fun is threatened by a deeply-held secret: he is a sea monster from another world just below the ocean's
+                surface.
+            </p>
+            <a class="watch-now" href="https://youtu.be/mYfJxlgR2jw?si=nVnHw7EUkEGIWs9C" target="_blank">Watch the
+                Trailer</a>
+        </div>
+    </div>
+    <div id="school" class="movies">
+        <div class="refresh">
+            <button class="ref">X</button>
+        </div>
+
+
+        <div class="image">
+            <img class="img" alt="The School for Good and Evil Image Poster"
+                title="The School for Good and Evil Image Poster"
+                src="https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fmetadata-static.plex.tv%2F1%2Fgracenote%2F11a84c45fe438898b479d518eb705bf0.jpg">
+        </div>
+        <div class="content">
+            <h2 class="movie">The School for Good and Evil</h2>
+            <p class="author">Directed by Paul Feig</p>
+            <p>PG
+                2022 2h 29m
+                Adventure, Family, Fantasy, Comedy, Drama</p>
+            <button class="add-to-whist">Add to Whistlist</button>
+            <p>Best friends Sophie and Agatha find themselves on opposing sides of an epic battle when they're swept
+                away into an enchanted school where aspiring heroes and villains are trained to protect the balance
+                between Good and Evil.</p>
+            <a class="watch-now" href="https://youtu.be/aftysDQ4hpI?si=bo93Ok_Jrkioshu5" target="_blank">Watch the
+                Trailer</a>
+        </div>
+    </div>
+    <div id="encanto" class="movies">
+        <div class="refresh">
+            <button class="ref">X</button>
+        </div>
+
+
+        <div class="image">
+            <img class="img" alt="Encanto Image Poster" title="Encanto Image Poster"
+                src="https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fmetadata-static.plex.tv%2F0%2Fgracenote%2F095a19b00b6399492b4d2a7cd527110e.jpg">
+        </div>
+        <div class="content">
+            <h2 class="movie">Encanto</h2>
+            <p class="author">Directed by Byron Howard and Jared Bush</p>
+            <p>PG
+                2021 1h 42m
+                Animation, Family, Fantasy, Comedy, Drama</p>
+            <button class="add-to-whist">Add to Whistlist</button>
+            <p>An extraordinary family, the Madrigals, live hidden in the mountains of Colombia, in a magical house
+                called an Encanto. The magic of the Encanto has blessed every child in the family with a unique gift -
+                every child except one, Mirabel.</p>
+            <a class="watch-now" href="https://youtu.be/CaimKeDcudo?si=beFj6qgr7ztvbzuZ" target="_blank">Watch the
+                Trailer</a>
+        </div>
+    </div>
+    <div id="nimona" class="movies">
+        <div class="refresh">
+            <button class="ref">X</button>
+        </div>
+
+
+        <div class="image">
+            <img class="img" alt="Nimona Image Poster" title="Nimona Image Poster"
+                src="https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fmetadata-static.plex.tv%2Fc%2Fgracenote%2Fc4e0da802f75adbf68400ec5d7be2ac0.jpg">
+        </div>
+        <div class="content">
+            <h2 class="movie">Nimona</h2>
+            <p class="author">Directed by Troy Quane and Nick Bruno</p>
+            <p>PG
+                2023 1h 39m
+                Animation, Family, Fantasy, Comedy, Drama</p>
+            <button class="add-to-whist">Add to Whistlist</button>
+            <p>When a knight in a futuristic medieval world is framed for a crime he didn't commit, the only one who
+                can help him prove his innocence is Nimona -- a mischievous teen who happens to be a shapeshifting
+                creature he's sworn to destroy.</p>
+            <a class="watch-now" href="https://youtu.be/f_fuHRyQbOc?si=W5k0oe2Y-OJNT4be" target="_blank">Watch the
+                Trailer</a>
+        </div>
+    </div>
+    <div id="incredibles" class="movies">
+        <div class="refresh">
+            <button class="ref">X</button>
+        </div>
+
+
+        <div class="image">
+            <img class="img" alt="The Incredibles Image Poster" title="The Incredibles Image Poster"
+                src="https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fmetadata-static.plex.tv%2F6%2Fgracenote%2F68d243d0a22efbe95f4d1c590f4de391.jpg">
+        </div>
+        <div class="content">
+            <h2 class="movie">The Incredibles</h2>
+            <p class="author">Directed by Brad Bir</p>
+            <p>PG
+                2004 1h 55m
+                Animation,Action, Family, Fantasy, Comedy</p>
+            <button class="add-to-whist">Add to Whistlist</button>
+            <p>Bob Parr has given up his superhero days to log in time as an insurance adjuster and raise his three
+                children with his formerly heroic wife in suburbia. But when he receives a mysterious assignment, it's
+                time to get back into costume.</p>
+            <a class="watch-now" href="https://youtu.be/-UaGUdNJdRQ?si=4m1K6qZWhjzQptsW" target="_blank">Watch the
+                Trailer</a>
+        </div>
+    </div>
+    <div id="moana" class="movies">
+        <div class="refresh">
+            <button class="ref">X</button>
+        </div>
+
+
+        <div class="image">
+            <img class="img" alt="Moana Image Poster" title="Moana Image Poster"
+                src="https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fmetadata-static.plex.tv%2F4%2Fgracenote%2F444f48263678f4f26b97dd471f0819ce.jpg">
+        </div>
+        <div class="content">
+            <h2 class="movie">Moana</h2>
+            <p class="author">Directed by Ron Clements and John Musker</p>
+            <p>PG
+                2016 1h 55m
+                Animation,Action, Family, Fantasy, Comedy</p>
+            <button class="add-to-whist">Add to Whistlist</button>
+            <p>In ancient Polynesia, when a terrible curse incurred by the demigod Maui reaches Moana's island, she
+                answers the Ocean's call to seek out Maui to set things right.</p>
+            <a class="watch-now" href="https://youtu.be/LKFuXETZUsI?si=BEzryfZh0lCEqTC5" target="_blank">Watch the
+                Trailer</a>
+        </div>
+    </div>
+    <div id="rata" class="movies">
+        <div class="refresh">
+            <button class="ref">X</button>
+        </div>
+
+
+        <div class="image">
+            <img class="img" alt="Ratatouille Image Poster" title="Ratatouille Image Poster"
+                src="https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fmetadata-static.plex.tv%2F7%2Fgracenote%2F7281cb0861d9c3b00f45228c60340d3c.jpg">
+        </div>
+        <div class="content">
+            <h2 class="movie">Ratatouille</h2>
+            <p class="author">Directed by Brad Bird
+            </p>
+            <p>PG
+                2007 1h 51m
+                Animation,Family, Fantasy, Comedy</p>
+            <button class="add-to-whist">Add to Whistlist</button>
+            <p>Remy, a resident of Paris, appreciates good food and has quite a sophisticated palate. He would love to
+                become a chef so he can create and enjoy culinary masterpieces to his heart's delight. The only problem
+                is, Remy is a rat. When he winds up in the sewer beneath one of Paris' finest restaurants, the rodent
+                gourmet finds himself ideally placed to realize his dream.</p>
+            <a class="watch-now" href="https://youtu.be/NgsQ8mVkN8w?si=1OpCLZI1KU3Ql4QJ" target="_blank">Watch the
+                Trailer</a>
+        </div>
+    </div>
+    <div id="zoo" class="movies">
+        <div class="refresh">
+            <button class="ref">X</button>
+        </div>
+
+
+        <div class="image">
+            <img class="img" alt="Zootopia Image Poster" title="Zootopia Image Poster"
+                src="https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fmetadata-static.plex.tv%2F0%2Fgracenote%2F007dade69842052b1717da76df112d8c.jpg">
+        </div>
+        <div class="content">
+            <h2 class="movie">Zootopia</h2>
+            <p class="author">Directed by Byron Howard and Rich Moore
+            </p>
+            <p>PG
+                20016 1h 49m
+                Animation,Action,Family, Fantasy, Comedy</p>
+            <button class="add-to-whist">Add to Whistlist</button>
+            <p>From the largest elephant to the smallest shrew, the city of Zootopia is a mammal metropolis where
+                various animals live and thrive. When Judy Hopps becomes the first rabbit to join the police force, she
+                quickly learns how tough it is to enforce the law. Determined to prove herself, Judy jumps at the
+                opportunity to solve a mysterious case. Unfortunately, that means working with Nick Wilde, a wily fox
+                who makes her job even harder.
+            </p>
+            <a class="watch-now" href="https://youtu.be/Y0c3nKWhlIA?si=-0m4dLPoHMzIZuGA" target="_blank">Watch the
+                Trailer 1</a>
+            <a class="watch-now" href="https://youtu.be/jWM0ct-OLsM?si=s98m5HF9HVyrpMCY" target="_blank">Watch the
+                Trailer 2</a>
+        </div>
+    </div>
+    <div id="insideout" class="movies">
+        <div class="refresh">
+            <button class="ref">X</button>
+        </div>
+
+
+        <div class="image">
+            <img class="img" alt="Inside out Image Poster" title="Inside out Image Poster"
+                src="https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fmetadata-static.plex.tv%2Fd%2Fgracenote%2Fd600c6539fd4c511827816a82c9c4ed7.jpg">
+        </div>
+        <div class="content">
+            <h2 class="movie">Inside Out</h2>
+            <p class="author">Directed by Pete Docter
+            </p>
+            <p>PG
+                20015 1h 35m
+                Animation,Action,Family, Fantasy, Comedy</p>
+            <button class="add-to-whist">Add to Whistlist</button>
+            <p>When 11-year-old Riley moves to a new city, her Emotions team up to help her through the transition.
+                Joy, Fear, Anger, Disgust and Sadness work together, but when Joy and Sadness get lost, they must
+                journey through unfamiliar places to get back home.
+            </p>
+            <a class="watch-now" href="https://youtu.be/yRUAzGQ3nSY?si=zYYFhMkzQ0SUAKa_" target="_blank">Watch the
+                Trailer</a>
+        </div>
+    </div>
+    <div id="hotel" class="movies">
+        <div class="refresh">
+            <button class="ref">X</button>
+        </div>
+
+
+        <div class="image">
+            <img class="img" alt="Hotel Transylvania Image Poster" title="Hotel Transylvania Image Poster"
+                src="https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fmetadata-static.plex.tv%2F4%2Fgracenote%2F4389e367d3d9cdb62e3dc22c9d2f965a.jpg">
+        </div>
+        <div class="content">
+            <h2 class="movie">Hotel Transylvania</h2>
+            <p class="author">Directed by Genndy Tartakovsky
+            </p>
+            <p>PG
+                2012 1h 31m
+                Animation,Action,Family, Fantasy, Comedy</p>
+            <button class="add-to-whist">Add to Whistlist</button>
+            <p>Welcome to Hotel Transylvania, Dracula's lavish five-stake resort, where monsters and their families can
+                live it up and no humans are allowed. One special weekend, Dracula has invited all his best friends to
+                celebrate his beloved daughter Mavis's 118th birthday. For Dracula catering to all of these legendary
+                monsters is no problem but the party really starts when one ordinary guy stumbles into the hotel and
+                changes everything!
+            </p>
+            <a class="watch-now" href="https://youtu.be/2Ioqovct5Vs?si=yR4GjPeEuhsRD_GK" target="_blank">Watch the
+                Trailer</a>
+
+        </div>
+    </div>
+    <div id="tangled" class="movies">
+        <div class="refresh">
+            <button class="ref">X</button>
+        </div>
+
+
+        <div class="image">
+            <img class="img" alt="Tangled Image Poster" title="Tangled Image Poster"
+                src="https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fmetadata-static.plex.tv%2F0%2Fgracenote%2F00c5213b5a79c25c9820e307585ef181.jpg">
+        </div>
+        <div class="content">
+            <h2 class="movie">Tangled</h2>
+            <p class="author">Directed by Byron Howard and Nathan Greno
+            </p>
+            <p>PG
+                2010 1h 40m
+                Comedy, Animation, Family, Fantasy, Musical, Romance, Adventure, Action, Children, Mystery
+            </p>
+            <button class="add-to-whist">Add to Whistlist</button>
+            <p>The magically long-haired Rapunzel has spent her entire life in a tower, but now that a runaway thief
+                has stumbled upon her, she is about to discover the world for the first time, and who she really is.
+            </p>
+            <a class="watch-now" href="https://youtu.be/ycoY201RTRo?si=Q9MfeSMsUNGN0YJf" target="_blank">Watch the
+                Trailer</a>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
