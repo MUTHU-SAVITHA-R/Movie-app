@@ -541,3 +541,63 @@
         gap: 10px;
     }
 }
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .top {
+        padding-left: 30px;
+        padding-right: 30px;
+        gap: 15px;
+    }
+}
+
+/* Remove hard-coded icon margins */
+.fav,
+.profile {
+    margin-left: 0 !important;
+}
+
+/* Push wishlist & profile to right */
+.top {
+    display: flex;
+    align-items: center;
+}
+
+.free {
+    margin-right: auto;
+}
+
+/* Icon size fix */
+.fav {
+    width: 26px;
+    height: 26px;
+}
+
+.profile {
+    width: 32px;
+    height: 32px;
+}
+/* ===== Fix fav & profile alignment AFTER login ===== */
+
+.top {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .fav, .profile {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .fav, .profile {
+        width: 26px;
+        height: 26px;
+    }
+}
+

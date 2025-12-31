@@ -68,15 +68,26 @@ loginform.addEventListener("submit", function (e) {
    
     
 })
-if(localStorage.getItem("logged")){
-    fav.style.display="block";
-    profile.style.display="block";
-    log.style.display="none";
-    signin.style.display="none";
-    free.style.display="none";
+document.addEventListener("DOMContentLoaded", function () {
 
-}
-   
+    if (localStorage.getItem("logged")) {
+        fav.style.display = "block";
+        profile.style.display = "block";
+
+        log.style.display = "none";
+        signin.style.display = "none";
+        free.style.display = "none";
+    } else {
+        fav.style.display = "none";
+        profile.style.display = "none";
+
+        log.style.display = "block";
+        signin.style.display = "block";
+        free.style.display = "inline-block";
+    }
+
+});
+
 
 var form = document.getElementById("sign-up-form");
 form.addEventListener("submit", function (e) {
