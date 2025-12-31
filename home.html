@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HBO Movie search app</title>
+    <title>CineScope Movie Search</title>
+<link rel="icon" type="image/png" href="images/cinescope.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="Stylesheet" href="style.css">
     <script defer src="index.js"></script>
 
@@ -14,74 +17,77 @@
 
     <div id="front-page">
         <div class="top">
-            <img src="https://www.hbo.com/img/hbo-logo-blk.svg" height="100px" width="100px"><br>
-            <form class="search-movies">
 
+            <img src="images/cinescope.png" height="50px" width="50px">
+
+
+            <form class="search-movies">
                 <input type="text" class="ip" placeholder="search movies">
-                <button class="search">search</button>
+                <button class="search"><i class="fa fa-search"></i></button>
 
             </form>
-            
-            <button id="log" onclick="updates()">LOGIN</button>
 
+            <button id="log" onclick="updates()">LOGIN</button>
             <button id="sign-in" onclick="update()">SIGN UP</button>
             <h5 class="free">SIGN UP FOR FREE</h5>
-            <img class="fav" style="margin-left:450px;" width=25px height=25px src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFsAdkcI8R_X5GDnPcOrn-uaBN_FYmp--5Cg&s">
-            <img class="profile" style="margin-left:20px;" width=35px height=35px  src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg">
+
+            <img class="fav" style="margin-left:450px;" width=25px height=25px
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFsAdkcI8R_X5GDnPcOrn-uaBN_FYmp--5Cg&s">
+            <img class="profile" style="margin-left:20px;" width=35px height=35px
+                src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg">
             <div id="profile-dropdown" class="dropdown hidden">
                 <p id="profile-name">User Name</p>
                 <p id="profile-email">user@email.com</p>
                 <button id="logout-btn">Logout</button>
             </div>
-              
         </div>
-        
 
 
- 
-        <img style="width: 100%;height: 100%;" src="https://joshbalogh.wordpress.com/wp-content/uploads/2021/10/img_4663.jpg?w=1024" width="1800px"
-                height="800px">
 
-        
+
+
+        <img 
+            src="https://joshbalogh.wordpress.com/wp-content/uploads/2021/10/img_4663.jpg?w=1024" width="1800px"
+            height="600px">
+
+
         <h1 style="text-align: center;">Stream the Latest</h1>
         <div id="boxes">
             <div class="box">
-                
+
                 <img src="https://m.media-amazon.com/images/I/819xG3LWPOS._UF894,1000_QL80_.jpg">
                 <h3>LUCA</h3>
-                <p>A 13-year-old boy experiences an unforgettable seaside summer on the Italian Riviera filled with gelato,
-                    pasta and endless scooter rides. Luca shares these adventures with his newfound best friend, but all the
-                    fun is threatened by a deeply-held secret: he is a sea monster from another world just below the ocean's
-                    surface.
-                </p>
+                <a class="watch-now" href="https://youtu.be/mYfJxlgR2jw?si=nVnHw7EUkEGIWs9C" target="_blank">Watch the
+                    Trailer</a>
+                <button class="add-to-whist">Add to Whistlist</button>
             </div>
             <div class="box">
-                
-                <img src="https://wallpapercat.com/w/full/a/8/1/43112-3840x2160-desktop-4k-encanto-background-image.jpg">
-                <H3 >ENCANTO</H3>
-                <p>An extraordinary family, the Madrigals, live hidden in the mountains of Colombia, in a magical house
-                            called an Encanto. The magic of the Encanto has blessed every child in the family with a unique gift -
-                            every child except one, Mirabel.</p>
+
+                <img
+                    src="https://wallpapercat.com/w/full/a/8/1/43112-3840x2160-desktop-4k-encanto-background-image.jpg">
+                <H3>ENCANTO</H3>
+                <a class="watch-now" href="https://youtu.be/CaimKeDcudo?si=beFj6qgr7ztvbzuZ" target="_blank">Watch the
+                    Trailer</a>
+                <button class="add-to-whist">Add to Whistlist</button>
+
             </div>
             <div class="box">
-                
-                <img src="https://c4.wallpaperflare.com/wallpaper/159/723/593/tangled-musical-film-wallpaper-preview.jpg">
-                <H3 >TANGLED</H3>s
-                    <p >The magically long-haired Rapunzel has spent her entire life in a tower, but now that a runaway thief
-                            has stumbled upon her, she is about to discover the world for the first time, and who she really is.
-                        </p>
+
+                <img
+                    src="https://c4.wallpaperflare.com/wallpaper/159/723/593/tangled-musical-film-wallpaper-preview.jpg">
+                <H3>TANGLED</H3>
+                <a class="watch-now" href="https://youtu.be/ycoY201RTRo?si=Q9MfeSMsUNGN0YJf" target="_blank">Watch the
+                    Trailer</a>
+                <button class="add-to-whist">Add to Whistlist</button>
+
             </div>
             <div class="box">
-                
+
                 <img src="https://wallpapers.com/images/featured/zootopia-e8u4m9lttr2wlg4q.jpg">
                 <h3>ZOOTOPIA</h3>
-    
-                    <p>From the largest elephant to the smallest shrew, the city of Zootopia is a mammal metropolis where
-                            various animals live and thrive. When Judy Hopps becomes the first rabbit to join the police force, she
-                            quickly learns how tough it is to enforce the law. Determined to prove herself, Judy jumps at the
-                            opportunity to solve a mysterious case. Unfortunately, that means working with Nick Wilde, a wily fox
-                            who makes her job even harder.
-                        </p>
+                <a class="watch-now" href="https://youtu.be/Y0c3nKWhlIA?si=-0m4dLPoHMzIZuGA" target="_blank">Watch the
+                    Trailer </a>
+                <button class="add-to-whist">Add to Whistlist</button>
             </div>
         </div>
 
@@ -108,47 +114,48 @@
         <hr>
     </div>
     <div class="backpage">
-    <div class="page">
-        <button class="cancel-page">X</button>
+        <div class="page">
+            <button class="cancel-page">X</button>
 
 
-        <h2 class="sign">SIGN UP</h2>
-        <p class="sign">signup Please create an account</p>
-        <form id="sign-up-form">
-            <label>Name</label>
-            <input type="text" placeholder="NAME" class="details" id="name" required>
-            <label>Email Address</label>
-            <input type="email" placeholder="email id" class="details" id="email" required>
-            <label>Password</label>
-            <input type="password" placeholder="password" class="details" id="password" required>
-            <label>Confirm Password</label>
-            <input type="password" placeholder="confirm password" class="details" id="confirmpassword" required>
-            <input type="checkbox" name="agree" id="agree" required>
-            <label>By signing up,I'm accepting your <mark>privacy policy </mark> & <mark>Terms of Service</mark></label>
-            <button id="up">Signup</button>
-            <h6>OR</h6>
-            <P>Already an account? <span class="change-to-login">Login</span></P>
+            <h2 class="sign">SIGN UP</h2>
+            <p class="sign">signup Please create an account</p>
+            <form id="sign-up-form">
+                <label>Name</label>
+                <input type="text" placeholder="NAME" class="details" id="name" required>
+                <label>Email Address</label>
+                <input type="email" placeholder="email id" class="details" id="email" required>
+                <label>Password</label>
+                <input type="password" placeholder="password" class="details" id="password" required>
+                <label>Confirm Password</label>
+                <input type="password" placeholder="confirm password" class="details" id="confirmpassword" required>
+                <input type="checkbox" name="agree" id="agree" required>
+                <label>By signing up,I'm accepting your <mark>privacy policy </mark> & <mark>Terms of
+                        Service</mark></label>
+                <button id="up">Signup</button>
+                <h6>OR</h6>
+                <P>Already an account? <span class="change-to-login">Login</span></P>
 
 
-        </form>
+            </form>
+        </div>
     </div>
-</div>
-   <div class="loginbackpage">
-    <div id="loginpage">
-        <button class="cancel-login">X</button>
+    <div class="loginbackpage">
+        <div id="loginpage">
+            <button class="cancel-login">X</button>
 
-        <h3 style="color:white ;text-align:center;">Welcome back</h3>
-        <form id="log-in-form">
-        <label>Email Address</label>
-            <input type="email" placeholder="email id" class="details" id="emailid" required>
-            <label>Password</label>
-            <input type="password" placeholder="Password" class="details" id="pw" required>
-            <p style="text-align: end;cursor: pointer;">Forget password ?</p>
-            <button id="up">Sign In</button>
-            <P>Dont have an account? <span class="change-to-signup">Sign up</span></P>
-         </form>
+            <h3 style="color:white ;text-align:center;">Welcome back</h3>
+            <form id="log-in-form">
+                <label>Email Address</label>
+                <input type="email" placeholder="email id" class="details" id="emailid" required>
+                <label>Password</label>
+                <input type="password" placeholder="Password" class="details" id="pw" required>
+                <p style="text-align: end;cursor: pointer;">Forget password ?</p>
+                <button id="up">Sign In</button>
+                <P>Dont have an account? <span class="change-to-signup">Sign up</span></P>
+            </form>
+        </div>
     </div>
-</div>
 
     <div id="luc" class="movies">
         <div class="refresh">

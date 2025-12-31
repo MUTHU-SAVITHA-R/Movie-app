@@ -19,21 +19,60 @@
 .ip{
     margin-left: 30px;
 }
-.search{
-    cursor: pointer;
+.search {
+    cursor: pointer;          
+    background-color: #fff;   
+    border: 1px solid #ccc;   
+    border-radius: 5px;       
+    padding: 8px 12px;        
+    display: flex;             
+    align-items: center;       
+    justify-content: center;   
+    transition: all 0.3s ease; 
+    border:none;
 }
-#log{
-    margin-left: 200px;
-    border: none;
+
+.search:hover {
+    background-color: #f0f0f0; 
+    border-color: #888;         
 }
-#sign-in{
-    
-    cursor: pointer;
-    border: none;
-    padding: 5px;
-    margin-left: 50px;
-    
+
+.search i {
+    font-size: 16px;  
+    color: #333;     
 }
+#log {
+    margin-left: 200px;       
+    border: none;              
+    padding: 8px 15px;         
+    background-color: #ff3b3f; 
+    color: white;             
+    border-radius: 5px;        
+    cursor: pointer;           
+    font-weight: bold;        
+    transition: background-color 0.3s ease; 
+}
+
+#log:hover {
+    background-color: #e63236; 
+}
+
+#sign-in {
+    cursor: pointer;           
+    border: none;             
+    padding: 8px 15px;         
+    margin-left: 50px;         
+    background-color: #4caf50; 
+    color: white;              
+    border-radius: 5px;       
+    font-weight: bold;         
+    transition: background-color 0.3s ease; 
+}
+
+#sign-in:hover {
+    background-color: #3e8e41; 
+}
+
 .free{
     
     
@@ -47,11 +86,12 @@
     
 }
 
-.fav,.profile{
-    display: none;
+.fav,
+.profile {
+    display: inline-block;
     cursor: pointer;
-    
 }
+
 .fav:hover{
     transform: scale(1.04);
     
@@ -266,43 +306,238 @@
     border:2px solid black;
     cursor: pointer;
     font-weight: bold;
+    text-align:center;
 }
 .refresh{
     padding:5px;
-
 }
 #boxes{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-.box{
-    
+.box {
+    display: flex;
+    flex-direction: column;
     width: 250px;
-    height:350px;
-    overflow: auto;
+    height: 300px;
+    gap: 8px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
-.box img{
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.box img {
     width: 100%;
     height: 50%;
-    
-
-}
-.box:hover{
-    transform: scale(1.04);
-    
-
-}
-.box h3{
-    margin-top:-1px;
-}
-.box p{
-    margin-top: -12px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
 }
 
+.box h3 {
+    margin: 10px 10px 0 10px;
+    font-size: 1.2rem;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.box p {
+    margin: 5px 10px 10px 10px;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.4;
+}
+@media screen and (max-width: 1024px) {
+    .top {
+        flex-wrap: wrap;
+        padding-left: 20px;
+        justify-content: center;
+    }
 
+    .ip {
+        margin-left: 0;
+        width: 250px;
+        margin-bottom: 10px;
+    }
 
+    #log, #sign-in {
+        margin-left: 10px;
+        padding: 6px 12px;
+    }
+    #boxes {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
 
+    .box {
+        width: 45%;
+        height: auto;
+    }
 
+    .seven {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 
+    .time {
+        flex-direction: column;
+        gap: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .free {
+        margin-left: 0;
+        padding: 10px;
+    }
+    .page, #loginpage {
+        width: 50% !important;
+        left: 25% !important;
+        top: 50px;
+        padding: 30px;
+    }
+
+    /* Movies overlay */
+    .movies {
+        flex-direction: column;
+        padding: 20px;
+        height: auto; 
+        background: rgba(0, 0, 0, 0.8); 
+        overflow-y: auto;
+    }
+
+    .movies .image, 
+    .movies .img {
+        width: 80%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .content {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+    .fav,
+    .profile {
+        margin-left: 10px !important;
+        width: 28px;
+        height: 28px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10px;
+    }
+
+    .ip {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #log, #sign-in {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+        padding: 8px;
+    }
+
+    #boxes {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .box {
+        width: 100%;
+        height: auto;
+    }
+
+    .seven {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .time {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .free {
+        margin-left: 0;
+        padding: 8px;
+    }
+    .page, #loginpage {
+        width: 90% !important;
+        left: 5% !important;
+        top: 30px;
+        padding: 20px;
+    }
+
+    #up {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .details {
+        font-size: 18px !important;
+    }
+
+    .change-to-login, .change-to-signup {
+        font-size: 14px !important;
+    }
+    .movies {
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+        background: rgba(0, 0, 0, 0.8); 
+        overflow-y: auto; 
+    }
+
+    .movies .image, 
+    .movies .img {
+        width: 100%;
+        height: auto;
+        margin: 5px auto;
+    }
+
+    .content {
+        margin-left: 5px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .add-to-whist, .watch-now {
+        padding: 5px 8px;
+        font-size: 14px;
+    }
+    .fav,
+    .profile {
+        margin-left: 0 !important;
+        margin-top: 10px;
+        width: 26px;
+        height: 26px;
+    }
+    .top {
+        align-items: center;
+        gap: 10px;
+    }
+}
