@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const loggedUser = JSON.parse(localStorage.getItem("logged"));
 
     if (loggedUser) {
+        
         fav.style.display = "inline-block";
         profile.style.display = "inline-block";
 
@@ -84,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("profile-email").textContent = loggedUser.email;
 
     } else {
+      
         fav.style.display = "none";
         profile.style.display = "none";
 
