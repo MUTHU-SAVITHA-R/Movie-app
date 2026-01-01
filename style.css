@@ -85,13 +85,6 @@
     cursor: pointer;
     
 }
-
-.fav,
-.profile {
-    display: inline-block;
-    cursor: pointer;
-}
-
 .fav:hover{
     transform: scale(1.04);
     
@@ -373,15 +366,32 @@
         margin-left: 10px;
         padding: 6px 12px;
     }
-    #boxes {
+     #boxes {
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
+        gap: 16px;
+        padding: 20px;
     }
 
     .box {
-        width: 45%;
+        width: 45%;           
         height: auto;
+        max-width: 320px;     
+    }
+
+    .box img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .box h3 {
+        font-size: 1.1rem;
+    }
+
+    .box p {
+        font-size: 0.95rem;
     }
 
     .seven {
@@ -408,8 +418,6 @@
         top: 50px;
         padding: 30px;
     }
-
-    /* Movies overlay */
     .movies {
         flex-direction: column;
         padding: 20px;
@@ -417,7 +425,6 @@
         background: rgba(0, 0, 0, 0.8); 
         overflow-y: auto;
     }
-
     .movies .image, 
     .movies .img {
         width: 80%;
@@ -457,16 +464,32 @@
     }
 
     #boxes {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
         padding: 10px;
     }
 
     .box {
-        width: 100%;
-        height: auto;
+        width: 100%;          
+        max-width: 100%;      
+        height: auto;         
+        margin: 0 auto;
     }
 
+    .box img {
+        width: 100%;
+        height: 180px;        
+        object-fit: cover;
+    }
+
+    .box h3 {
+        font-size: 1rem;
+    }
+
+    .box p {
+        font-size: 0.9rem;
+    }
     .seven {
         flex-direction: column;
         align-items: flex-start;
@@ -541,7 +564,6 @@
         gap: 10px;
     }
 }
-
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
     .top {
         padding-left: 30px;
@@ -549,14 +571,10 @@
         gap: 15px;
     }
 }
-
-/* Remove hard-coded icon margins */
 .fav,
 .profile {
     margin-left: 0 !important;
 }
-
-/* Push wishlist & profile to right */
 .top {
     display: flex;
     align-items: center;
@@ -565,8 +583,6 @@
 .free {
     margin-right: auto;
 }
-
-/* Icon size fix */
 .fav {
     width: 26px;
     height: 26px;
@@ -576,28 +592,26 @@
     width: 32px;
     height: 32px;
 }
-/* ===== Fix fav & profile alignment AFTER login ===== */
-
 .top {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-}
-
-/* Tablet */
+} 
 @media screen and (max-width: 1024px) {
     .fav, .profile {
         width: 28px;
         height: 28px;
     }
 }
-
-/* Mobile */
 @media screen and (max-width: 480px) {
     .fav, .profile {
         width: 26px;
         height: 26px;
     }
 }
-
+.fav,
+.profile {
+    display: none;
+    cursor: pointer;
+}

@@ -70,23 +70,29 @@ loginform.addEventListener("submit", function (e) {
 })
 document.addEventListener("DOMContentLoaded", function () {
 
-    if (localStorage.getItem("logged")) {
-        fav.style.display = "block";
-        profile.style.display = "block";
+    const loggedUser = JSON.parse(localStorage.getItem("logged"));
+
+    if (loggedUser) {
+        fav.style.display = "inline-block";
+        profile.style.display = "inline-block";
 
         log.style.display = "none";
         signin.style.display = "none";
         free.style.display = "none";
+
+        document.getElementById("profile-name").textContent = loggedUser.name;
+        document.getElementById("profile-email").textContent = loggedUser.email;
+
     } else {
         fav.style.display = "none";
         profile.style.display = "none";
 
-        log.style.display = "block";
-        signin.style.display = "block";
+        log.style.display = "inline-block";
+        signin.style.display = "inline-block";
         free.style.display = "inline-block";
     }
-
 });
+
 
 
 var form = document.getElementById("sign-up-form");
